@@ -7,7 +7,15 @@ def encode(pwd):
 
 # Fernando's code
 def decode(pwd):
-    return ""
+    out = ""
+
+    for dig in pwd:
+
+        invert = ((int(dig)+10)-3)%10
+        out += str(invert)
+
+    return out
+
 
 def main():
     password = ""
